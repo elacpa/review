@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BREAK OUT OF ORDINARY 💥 — Outliers Escape Room</title>
+<title>BREAK OUT OF ORDINARY 💥 | Outliers Escape Room</title>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -450,7 +449,7 @@ const MEMORY_CARDS_BASE = [
 const COCKPIT_QUOTES = [
   {id:0, text:'"Captain… it\'s a little cloudy today, don\'t you think?"', correctSlot:0},
   {id:1, text:'"Sir, I\'m somewhat concerned about the weather conditions ahead."', correctSlot:1},
-  {id:2, text:'"Captain! We NEED to change course NOW — this storm will bring us down!"', correctSlot:2},
+  {id:2, text:'"Captain! We NEED to change course NOW. This storm will bring us down!"', correctSlot:2},
 ];
 
 const MARITA_BLOCKS = [
@@ -469,13 +468,13 @@ const CHAPTERS = [
       {type:'mc',
        q:'Why do so many elite Canadian hockey players share birthdays in January, February, and March?',
        opts:[
-         'Winter babies are naturally stronger athletes',
-         'The January 1st eligibility cutoff makes older kids seem more talented to coaches',
-         'Hockey scouts secretly prefer winter birthdays',
-         'Pure coincidence — Gladwell just got lucky with his data',
+         'Cold weather births strengthen bone density and physical endurance in young players',
+         'The January 1st age cutoff makes slightly older kids look more talented to scouts',
+         'Canadian hockey scouts have always preferred players born during the winter months',
+         'It is a coincidence that Gladwell noticed only after studying thousands of team rosters',
        ], correct:1},
       {type:'minigame', game:'sort-birthdays', title:'DRAFT DAY! 🏒',
-       instructions:'A scout is picking players. Click a player card to select it (it turns orange), then click a zone to sort them. Players born Jan–Mar → DRAFTED. Everyone else → PASSED OVER.'},
+       instructions:'A scout is picking players. Click a player card to select it (it turns orange), then click a zone to sort them. Players born Jan to Mar go to DRAFTED. Everyone else goes to PASSED OVER.'},
     ]
   },
   {
@@ -488,10 +487,10 @@ const CHAPTERS = [
       {type:'mc',
        q:'Where did The Beatles rack up the thousands of hours that made them legends?',
        opts:[
-         'Liverpool pubs on weekends',
-         'Hamburg, Germany — playing 8-hour club sets night after night',
-         "London's West End theater scene",
-         'New York jazz clubs during their first US tour',
+         'Liverpool pubs on weekends and holidays while they were still in secondary school',
+         'Hamburg, Germany, where they played eight-hour sets in clubs night after night',
+         'London theater venues during their early years as a struggling cover band',
+         'New York jazz clubs during a secret pre-fame American tour in the early 1960s',
        ], correct:1},
     ]
   },
@@ -501,14 +500,19 @@ const CHAPTERS = [
     steps:[
       {type:'mc',
        q:'At what IQ level does Gladwell say extra intelligence stops meaningfully boosting real-world success?',
-       opts:['100','120','150','195 — the higher the better, obviously'], correct:1},
+       opts:[
+         'Around 100, which is considered the average score for the general population',
+         'Around 120, after which more IQ points stop adding meaningful real-world advantage',
+         'Around 150, since nearly all top achievements require near-perfect cognitive scores',
+         'There is no ceiling because a higher IQ always improves a person\'s chances of success',
+       ], correct:1},
       {type:'mc',
        q:"What did researcher Lewis Terman's decades-long study of gifted children ultimately prove?",
        opts:[
-         'High IQ guarantees world-class achievement',
-         'Gifted children always out-earn their peers',
-         'High IQ alone does NOT guarantee becoming an outlier',
-         'Intelligence peaks at age 12 and declines after',
+         'Children with very high IQs consistently outperformed peers in career earnings and status',
+         'Gifted students almost always rise to the top of whatever professional field they choose',
+         'A high IQ alone does not guarantee someone will become an outlier or achieve greatness',
+         'Early intelligence testing is unreliable, and Terman himself abandoned the methodology',
        ], correct:2},
     ]
   },
@@ -517,20 +521,20 @@ const CHAPTERS = [
     flavor:"Being smart isn't enough. Sorry, nerds.",
     steps:[
       {type:'mc',
-       q:"What type of intelligence does Gladwell argue is just as critical as IQ — knowing what to say, to whom, and when?",
+       q:'What type of intelligence does Gladwell argue is just as critical as IQ? It means knowing what to say, to whom, and when.',
        opts:[
-         'Emotional intelligence',
-         'Practical intelligence',
-         'Creative intelligence',
-         "Spiritual intelligence (yes, that's a real thing — no, it's not the answer)",
+         'Emotional intelligence, which involves recognizing and managing feelings in social settings',
+         'Practical intelligence, the ability to read a situation and know exactly what to say and when',
+         'Creative intelligence, which involves generating original solutions to difficult problems',
+         'Interpersonal intelligence, described as a deep sensitivity to other people\'s motivations and goals',
        ], correct:1},
       {type:'mc',
        q:'Why did Robert Oppenheimer succeed where the equally brilliant Christopher Langan did not?',
        opts:[
-         'Oppenheimer had a higher IQ',
-         'Langan refused to go to college',
-         "Oppenheimer's privileged upbringing gave him the social confidence to navigate institutions and ask for what he needed",
-         'Oppenheimer worked significantly harder',
+         "Langan grew up in poverty without access to the books, tutors, or mentors that wealthier students had",
+         "Oppenheimer scored significantly higher on the standardized aptitude tests used to evaluate candidates",
+         "Oppenheimer's upbringing gave him the confidence to negotiate directly with powerful institutions",
+         "Langan dropped out of college early and refused to seek guidance from anyone who could have helped",
        ], correct:2},
     ]
   },
@@ -541,18 +545,18 @@ const CHAPTERS = [
       {type:'mc',
        q:"Why did being excluded from elite law firms actually HELP Joe Flom's career in the long run?",
        opts:[
-         'Smaller firms paid better salaries',
-         'He was forced into litigation work that elite firms considered beneath them — work that later became the most lucrative area of law',
-         'He had access to better legal education outside the big firms',
-         'He relocated to a city with almost no legal competition',
+         'Smaller firms offered significantly higher starting salaries to attract top legal graduates',
+         'Being pushed into litigation gave him deep experience in the area that later became most lucrative',
+         'He had access to better legal training programs that were simply unavailable at the elite firms',
+         'Relocating to a smaller city early in his career put him in a market with almost zero competition from rivals',
        ], correct:1},
       {type:'mc',
-       q:'According to Gladwell, what three qualities make work truly "meaningful"?',
+       q:'According to Gladwell, what three qualities make work truly meaningful?',
        opts:[
-         'Fame, wealth, and respect',
-         'Security, routine, and prestige',
-         'Freedom, creativity, and teamwork',
-         'Autonomy, complexity, and a connection between effort and reward',
+         'Fame, wealth, and the recognition that comes from being respected by peers and the public',
+         'Security, a stable and predictable routine, and the prestige of a well-known organization',
+         'Creative freedom, the ability to collaborate with others, and a supportive team around you',
+         'Autonomy, complexity, and a clear link between the effort you put in and the reward you get',
        ], correct:3},
     ]
   },
@@ -562,44 +566,49 @@ const CHAPTERS = [
     steps:[
       {type:'mc',
        q:'What is the term Gladwell uses for the aggressive social code inherited by Harlan residents from their Scotch-Irish ancestors?',
-       opts:['Culture of silence','Culture of pride','Culture of revenge','Culture of honor'], correct:3},
-      {type:'mc',
-       q:'Why do "cultures of honor" develop in herding societies rather than farming communities?',
        opts:[
-         'Herders are naturally more isolated and suspicious of outsiders',
-         'Livestock can be easily stolen, so maintaining a fierce reputation for retaliation is essential to survival',
-         'Farming communities always had stronger legal systems to protect them',
-         'Herders adopted aggressive cultures through constant travel and contact with other groups',
+         'Culture of silence, where old grievances are stored privately and never openly addressed',
+         'Culture of pride, rooted in centuries of Scottish and Irish traditions of clan loyalty',
+         'Culture of revenge, where retaliating against any insult is treated as a community obligation',
+         'Culture of honor, a code requiring people to defend their reputation by force if necessary',
+       ], correct:3},
+      {type:'mc',
+       q:'Why do cultures of honor tend to develop in herding societies rather than in farming communities?',
+       opts:[
+         'Herders traveled constantly, which made them far more suspicious of strangers they encountered',
+         'Livestock can be stolen overnight, so a fierce reputation for retaliation protects your herd',
+         'Farming communities always had stronger local courts and legal systems to resolve disputes',
+         'Frequent contact with aggressive neighboring groups forced herders to adopt similar behaviors',
        ], correct:1},
     ]
   },
   {
     num:7, title:'The Ethnic Theory of Plane Crashes', emoji:'✈️',
-    flavor:'This chapter literally involves planes falling out of the sky. No pressure.',
+    flavor:'This chapter involves planes falling out of the sky. No pressure.',
     steps:[
       {type:'mc',
        q:'What does the Power Distance Index (PDI) measure?',
        opts:[
-         'How quickly pilots make life-or-death decisions under stress',
-         'How well a plane performs at different altitudes',
-         'How often pilots break standard procedures',
-         'How much a culture accepts and expects unequal power — like a co-pilot deferring to a captain even when the captain is wrong',
+         'The speed at which a pilot can process information and execute critical decisions under pressure',
+         'How effectively an aircraft maintains altitude and performance across different weather conditions',
+         'How frequently a crew member deviates from standard safety protocols on long international flights',
+         'How much a culture expects people to accept unequal power, like deferring to someone in authority',
        ], correct:3},
       {type:'mc',
-       q:'What is "mitigated speech" in the context of cockpit communication?',
+       q:'What is mitigated speech in the context of cockpit communication?',
        opts:[
-         'Speaking too loudly and distracting the pilot',
-         "Using technical jargon the co-pilot doesn't understand",
-         'Softening or hinting at a warning instead of stating it directly and urgently',
-         'Communicating across a language barrier mid-flight',
+         'Speaking so loudly and repeatedly in the cockpit that it distracts the pilot at a critical moment',
+         'Using so much technical jargon during a crisis that other crew members cannot understand the message',
+         'Softening or hinting at a warning instead of stating it clearly and with the urgency it deserves',
+         'Attempting to pass along critical flight information when a significant language barrier exists',
        ], correct:2},
       {type:'mc',
        q:'How did Korean Air transform its terrible safety record into one of the best in the world?',
        opts:[
-         'They replaced their entire fleet with newer aircraft',
-         'They hired only foreign pilots with different training',
-         'They reduced the number of international routes',
-         'They retrained pilots to communicate more directly and assertively, overriding their cultural tendency toward deference',
+         'They invested heavily in replacing their entire aging fleet with aircraft that had newer safety systems',
+         'They began hiring only pilots who were trained abroad in countries with lower power distance scores',
+         'They drastically cut international routes so crews could build deep expertise on familiar flight paths',
+         'They retrained pilots to communicate assertively, overriding the cultural tendency toward deference',
        ], correct:3},
       {type:'minigame', game:'cockpit-translator', title:'COCKPIT TRANSLATOR ✈️',
        instructions:'Rank these co-pilot warnings from MOST MITIGATED (vague and wishy-washy) to MOST DIRECT (urgent and clear). Click a quote to select it, then click the numbered slot where it belongs.'},
@@ -607,36 +616,36 @@ const CHAPTERS = [
   },
   {
     num:8, title:'Rice Paddies and Math Tests', emoji:'🌾',
-    flavor:"Final stretch. Your brain is a rice paddy right now — this is where hard work pays off.",
+    flavor:"Final stretch. Your brain is a rice paddy right now. This is where hard work pays off.",
     steps:[
       {type:'mc',
        q:'What farming tradition does Gladwell connect to the strong work ethic and math performance seen in many Asian students?',
        opts:[
-         'Wheat farming',
-         'Tea farming',
-         'Corn farming',
-         'Rice farming — incredibly labor-intensive, year-round, and detail-obsessed',
+         'Wheat farming, which requires precise seasonal timing and long periods of careful planning',
+         'Tea farming, which demands skilled hands and close attention to leaf quality and harvest timing',
+         'Corn farming, which rewards consistency and can be practiced across many different climates',
+         'Rice farming, an incredibly labor-intensive process that requires year-round attention to detail',
        ], correct:3},
       {type:'mc',
        q:'Why do children learning Asian languages often find early math easier?',
        opts:[
-         'Asian schools use far more repetition and drilling',
-         'Asian parents invest more time in early childhood math education',
-         'Asian number words are shorter and follow a more logical, consistent pattern — making them easier to remember and work with',
-         "It's a genetic cognitive advantage, according to Gladwell",
+         'Asian schools use far more daily repetition and drilling of number facts than schools in the West',
+         'Asian parents are statistically more likely to invest time in structured early math education at home',
+         'Asian number words are shorter and follow a more consistent pattern, which makes them easier to use',
+         'It reflects a genetic cognitive advantage that Gladwell references but does not directly endorse',
        ], correct:2},
       {type:'mc',
-       q:'On international math tests, students who score higher also tend to do what at a higher rate?',
+       q:'On international math tests, students who score higher also tend to do what at a noticeably higher rate?',
        opts:[
-         'Sleep more hours per night',
-         'Come from two-parent households',
-         'Own more books at home',
-         'Completely fill out long background questionnaires — showing their persistence carries over',
+         'They report sleeping significantly more hours per night, which research links to better memory retention',
+         'They are far more likely to come from stable two-parent households with above-average income levels',
+         'They own a much larger number of books at home compared to their lower-scoring classmates',
+         'They fully complete long background questionnaires, showing their persistence carries into the test itself',
        ], correct:3},
       {type:'minigame', game:'rice-paddy', title:'BUILD THE RICE PADDY 🌾',
        instructions:'Put the 6 steps of rice farming in the correct order. Click a step card to select it (it turns orange), then click the numbered slot where it belongs.'},
       {type:'minigame', game:'memory-match', title:'OUTLIERS MEMORY MATCH 🃏',
-       instructions:'Match each person or group to their key advantage from the book! Click two cards — if they match, they stay green. Find all 6 pairs to continue!'},
+       instructions:'Match each person or group to their key advantage from the book! Click two cards. If they match, they stay green. Find all 6 pairs to continue!'},
     ]
   },
   {
@@ -644,23 +653,28 @@ const CHAPTERS = [
     flavor:'ONE CHAPTER. BETWEEN YOU. AND FREEDOM. DO. NOT. BLOW. IT. 💥',
     steps:[
       {type:'mc',
-       q:'Which school in the South Bronx proved that low-income students could achieve at the highest levels given enough time and structure?',
-       opts:['SUCCESS Academy','Democracy Prep Charter School','Bronx Science High School','KIPP Academy'], correct:3},
-      {type:'mc',
-       q:"What specific problem does KIPP's extended school day and year-round calendar solve?",
+       q:'Which school in the South Bronx proved that low-income students could achieve at the highest academic levels given enough time and structure?',
        opts:[
-         'Teacher burnout caused by short summers',
-         'Overcrowded classrooms during the regular school year',
-         'Lack of technology access for low-income students',
-         'The "summer slide" — where poor students lose academic ground over summer while wealthy students maintain or gain it',
+         'SUCCESS Academy, which operates dozens of charter schools across all five New York City boroughs',
+         'Democracy Prep Charter School, which focuses heavily on civic engagement and academic achievement',
+         'Bronx Science High School, a specialized public school that requires a competitive entrance examination',
+         'KIPP Academy, a South Bronx charter school known for its extended hours and demanding expectations',
+       ], correct:3},
+      {type:'mc',
+       q:"What specific problem does KIPP's extended school day and year-round academic calendar solve?",
+       opts:[
+         'Teacher burnout, which research shows is most severe after a full academic year without a real break',
+         'Classroom overcrowding that tends to get worse during the regular school year when attendance peaks',
+         'Gaps in computer and technology access that affect low-income students outside of school hours',
+         'The summer slide, where low-income students lose academic ground while wealthier peers hold steady',
        ], correct:3},
       {type:'mc',
        q:"What does Marita's story ultimately prove about the nature of success?",
        opts:[
-         'Any student can succeed through sheer willpower and individual effort alone',
-         'Intelligence is the single most important factor in academic achievement',
-         'Private schools will always outperform public schools for low-income students',
-         'Individual effort matters — but only when paired with the right opportunity, structure, and environment',
+         'Any student can achieve success through sheer personal willpower and individual effort alone, regardless of background or resources',
+         'Intelligence is the single most important variable when it comes to predicting long-term academic achievement',
+         'Private charter schools will always produce stronger outcomes for low-income students than traditional public schools',
+         'Individual effort matters deeply, but only when it is paired with the right opportunity and structure',
        ], correct:3},
       {type:'minigame', game:'maritas-day', title:"MARITA'S DAY 📅",
        instructions:"See how every hour of Marita's day is used. Click each activity block to add it to her 24-hour schedule and discover her bargain."},
@@ -673,11 +687,32 @@ const SEQUENCE = [
   {type:'chapter', idx:0},
   {type:'chapter', idx:1},
   {type:'chapter', idx:2},
-  {type:'gate', code:'HAMBURG', num:1, msg:"IMPRESSIVE. You've cracked the first vault. But the next door needs a key only your teacher holds. Ask them. We'll wait. 🎭"},
+  {type:'gate', code:'HAMBURG', num:1, msg:`
+    <p style="font-size:0.85rem;letter-spacing:2px;opacity:0.6;margin-bottom:14px;text-transform:uppercase">A riddle for your group</p>
+    <div style="background:rgba(255,255,255,0.1);border:2px solid rgba(255,214,0,0.4);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:1rem;line-height:1.7;font-style:italic;max-width:520px;margin-left:auto;margin-right:auto;">
+      "A scout is watching your group right now. He doesn't care who's smartest, funniest, or tallest. He wants the one the cutoff date loved most. Who in your group would he draft first?"
+    </div>
+    <div style="background:rgba(255,214,0,0.15);border-left:4px solid #FFD600;border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:10px;text-align:left;max-width:520px;margin-left:auto;margin-right:auto;">
+      <p style="font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;opacity:0.7;margin-bottom:6px;">Your mission</p>
+      <p style="font-size:0.95rem;line-height:1.6;">Figure out which person in your group was born closest to January 1st. That person gets up and goes to the teacher in the main room to get the code. <strong style="color:#FFD600;">NOT the person sharing the screen</strong> -- they stay put and guard the vault.</p>
+    </div>
+  `},
   {type:'chapter', idx:3},
   {type:'chapter', idx:4},
   {type:'chapter', idx:5},
-  {type:'gate', code:'ROSETO', num:2, msg:"TWO-THIRDS DONE. The vault is shaking. Three chapters stand between you and FREEDOM. Your teacher holds one final secret… 👀"},
+  {type:'gate', code:'ROSETO', num:2, msg:`
+    <p style="font-size:0.85rem;letter-spacing:2px;opacity:0.6;margin-bottom:14px;text-transform:uppercase">Solve this riddle as a team</p>
+    <div style="background:rgba(255,255,255,0.1);border:2px solid rgba(255,214,0,0.4);border-radius:10px;padding:18px 20px;margin-bottom:16px;font-size:1rem;line-height:1.7;font-style:italic;max-width:520px;margin-left:auto;margin-right:auto;">
+      "You cannot buy it. You cannot fake it for long. In Kentucky's hills, men bled to protect it. In hallways and neighborhoods, fights still break out over it. It is one word. What is it?"
+    </div>
+    <div style="background:rgba(255,214,0,0.15);border-left:4px solid #FFD600;border-radius:0 8px 8px 0;padding:12px 18px;margin-bottom:10px;text-align:left;max-width:520px;margin-left:auto;margin-right:auto;">
+      <p style="font-size:0.88rem;font-style:italic;opacity:0.75;">Hint: the answer begins with the letter <strong style="color:#FFD600;font-size:1.1rem;">H</strong></p>
+    </div>
+    <div style="background:rgba(255,214,0,0.15);border-left:4px solid #FFD600;border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:10px;text-align:left;max-width:520px;margin-left:auto;margin-right:auto;">
+      <p style="font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;opacity:0.7;margin-bottom:6px;">Your mission</p>
+      <p style="font-size:0.95rem;line-height:1.6;">Agree on your one-word answer as a group. Then send someone to bring that word to the teacher in the main room. The teacher will give you the code to type below. <strong style="color:#FFD600;">NOT the person sharing the screen</strong> -- they stay put and guard the vault.</p>
+    </div>
+  `},
   {type:'chapter', idx:6},
   {type:'chapter', idx:7},
   {type:'chapter', idx:8},
@@ -891,10 +926,10 @@ function renderGate(stage){
     <div class="gate-icon">🔑</div>
     <h2 class="gate-title">TEACHER CODE REQUIRED</h2>
     <p class="gate-num">CODE GATE ${stage.num} OF 2</p>
-    <p class="gate-msg">${stage.msg}</p>
+    <div class="gate-msg">${stage.msg}</div>
     <input type="text" id="gate-input" class="code-input" placeholder="ENTER CODE…" autocomplete="off">
     <button class="btn" id="gate-submit" style="font-size:1.3rem;padding:14px 32px">🔓 UNLOCK THE VAULT</button>
-    <p class="gate-hint">Ask your teacher for the secret code!</p>
+    <p class="gate-hint">Once you have the code, the person who went to the teacher types it above.</p>
   </div>`;
 }
 
